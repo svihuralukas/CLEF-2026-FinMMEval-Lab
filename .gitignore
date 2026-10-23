@@ -1,3 +1,4 @@
 .env 
 task1_training_baselines/artifacts/
 task1_training_baselines/cache/
+task1_training_baselines/.vscode/
