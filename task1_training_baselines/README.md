@@ -88,7 +88,74 @@ Current Hindi dev result from the public-data-only LoRA run:
 
 For comparison, the existing Qwen2.5-3B public baseline file scored `45/100 = 45%` on the same Hindi dev set.
 
+## Evaluation: usage of `evaluate_models.py`
 
+The script evaluates the base models and/or their LoRA adapters. Models are loaded one after another, never at once.
+
+```
+# 1) Check paths, data and tokenizers. No model weights are loaded, so it is safe on a weak PC.
+python evaluate_models.py --mode validation --dry-run
+
+# 2) Smoke test: 2 examples per language (results go to results/validation_smoke/)
+python evaluate_models.py --mode validation --model qwen --smoke
+python evaluate_models.py --mode validation --model ministral --smoke
+
+# 3) Full run
+python evaluate_models.py --mode validation --model both --variant lora
+python evaluate_models.py --mode test --model both --variant both
+```
+
+| Option | Meaning |
+|---|---|
+| `--mode` | `validation` (split `validation` of the official file) or `test` (LLM-labeled test set, all rows) |
+| `--model` | `qwen`, `ministral` or `both` |
+| `--variant` | `base` (no adapter), `lora`, or `both` |
+| `--smoke [N]` | N examples per language (default 2) |
+| `--dry-run` | Check paths, data and tokenizers only |
+| `--device`, `--dtype` | `auto`, `cuda`, `cpu`; `auto`, `bf16`, `fp16`, `fp32` |
+| `--data`, `--split`, `--qwen-adapter`, `--ministral-adapter`, `--out-dir` | Override paths and filters |
+
+Output goes to `results/<mode>/`: `eval_<model>_<variant>.json` (summary and per-question predictions) and `comparison.json` (all runs side by side).
+
+## Google Colab
+
+Training and the baseline evaluations were run on Google Colab because of hardware limits. The notebooks are in `notebooks/` and document the actual runs. The same code can be run locally with the commands above.
+
+## Results
+ 
+All numbers are for the LoRA adapters. Validation = held-out split of `public_task1_train.jsonl` (483 questions). Test = the LLM-labeled public test set (800 questions, 200 per language).
+ 
+| Model | Validation (483) | Test, LLM labels (800) |
+|---|---:|---:|
+| Qwen2.5-3B, LoRA | 49.3% (238)  | 57.3% (458)  |
+| Ministral-3-3B, LoRA | 48.2% (233)  | 62.4% (499)  |
+ 
+Brackets are 95% Wilson intervals, counts are correct answers. Chance level is about 25% for four options.
+ 
+### Test set (LLM labels), per language
+ 
+| Language | n | Qwen2.5-3B LoRA | Ministral-3-3B LoRA | Difference | 
+|---|---:|---:|---:|---:|
+| English | 200 | 56.5% | 61.0% | +4.5 | 
+| Chinese | 200 | 52.0% | 47.5% | -4.5 | 
+| Arabic | 200 | 66.0% | 72.5% | +6.5 | 
+| Hindi | 200 | 54.5% | 68.5% | +14.0 |  
+| All | 800 | 57.3% | 62.4% | +5.1 | 
+ 
+ 
+### Validation split, per language and source (correct / n)
+ 
+| Group | n | Qwen2.5-3B LoRA | Ministral-3-3B LoRA |
+|---|---:|---:|---:|
+| English | 235 | 120 (51.1%) | 113 (48.1%) |
+| - bhashabench_en | 213 | 107 (50.2%) | 100 (46.9%) |
+| - cfa_cpa_english | 22 | 13 (59.1%) | 13 (59.1%) |
+| Hindi (bhashabench_hi) | 205 | 89 (43.4%) | 92 (44.9%) |
+| Arabic | 22 | 13 (59.1%) | 12 (54.5%) |
+| Chinese | 5 | 2 (40.0%) | 1 (20.0%) |
+| Greek | 6 | 5 (83.3%) | 5 (83.3%) |
+| Spanish | 10 | 9 (90.0%) | 10 (100%) |
+ 
 
 ## Attribution and Citations
 
