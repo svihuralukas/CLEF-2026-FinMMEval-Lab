@@ -14,17 +14,7 @@ Organizers' repository: https://github.com/mbzuai-nlp/CLEF-2026-FinMMEval-Lab
 
 ## Task
 
-The system receives one multiple-choice question from a finance or accounting exam, together with its options, and returns the label of the correct option. Explanations and confidence are not evaluated. The official task languages are English, Chinese, Arabic and Hindi.
-
-Most financial NLP work is done in English, and Arabic in particular is still little explored. Terminology, scripts and exam conventions differ between languages, so a model that is strong in English may not transfer. The questions also require finance vocabulary, calculation and conceptual understanding, not only general language skill.
-
-## Goals
-
-1. Understand the task and the data, collect relevant sources, and create appropriate training and testing data.
-2. Replicate and test the official LoRA baselines on Qwen2.5-3B-Instruct and Ministral-3-3B-Instruct.
-3. Improve data quality and consistency, and explore additional languages where appropriate.
-4. Investigate approaches to improve baseline performance and, where beneficial, develop alternative models.
-5. Document methodology, setup, implementation and results for reproducibility.
+The system receives one multiple-choice question from a finance or accounting exam, together with its options, and returns the label of the correct option.  Explanations and confidence are not evaluated. The official task languages are English, Chinese, Arabic and Hindi. Model should be capable of answering questions in multiple languages.
 
 ## Documentation
 
