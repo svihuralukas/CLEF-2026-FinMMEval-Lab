@@ -1,0 +1,54 @@
+{
+  "ALL": {
+    "n": 18,
+    "ministral/lora": 0.3889
+  },
+  "arabic": {
+    "n": 3,
+    "ministral/lora": 0.3333
+  },
+  "arabic_accounting_train": {
+    "n": 3,
+    "ministral/lora": 0.3333
+  },
+  "bhashabench_en": {
+    "n": 3,
+    "ministral/lora": 0.0
+  },
+  "bhashabench_hi": {
+    "n": 3,
+    "ministral/lora": 0.3333
+  },
+  "cfa_cpa_chinese": {
+    "n": 3,
+    "ministral/lora": 0.0
+  },
+  "chinese": {
+    "n": 3,
+    "ministral/lora": 0.0
+  },
+  "english": {
+    "n": 3,
+    "ministral/lora": 0.0
+  },
+  "flare_es": {
+    "n": 3,
+    "ministral/lora": 1.0
+  },
+  "greek": {
+    "n": 3,
+    "ministral/lora": 0.6667
+  },
+  "hindi": {
+    "n": 3,
+    "ministral/lora": 0.3333
+  },
+  "plutus": {
+    "n": 3,
+    "ministral/lora": 0.6667
+  },
+  "spanish": {
+    "n": 3,
+    "ministral/lora": 1.0
+  }
+}

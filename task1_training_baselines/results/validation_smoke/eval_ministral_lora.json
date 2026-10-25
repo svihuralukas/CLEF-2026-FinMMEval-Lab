@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "ALL": {
+      "acc": 0.3889,
+      "correct": 7,
+      "n": 18
+    },
+    "arabic": {
+      "acc": 0.3333,
+      "correct": 1,
+      "n": 3
+    },
+    "arabic_accounting_train": {
+      "acc": 0.3333,
+      "correct": 1,
+      "n": 3
+    },
+    "bhashabench_en": {
+      "acc": 0.0,
+      "correct": 0,
+      "n": 3
+    },
+    "bhashabench_hi": {
+      "acc": 0.3333,
+      "correct": 1,
+      "n": 3
+    },
+    "cfa_cpa_chinese": {
+      "acc": 0.0,
+      "correct": 0,
+      "n": 3
+    },
+    "chinese": {
+      "acc": 0.0,
+      "correct": 0,
+      "n": 3
+    },
+    "english": {
+      "acc": 0.0,
+      "correct": 0,
+      "n": 3
+    },
+    "flare_es": {
+      "acc": 1.0,
+      "correct": 3,
+      "n": 3
+    },
+    "greek": {
+      "acc": 0.6667,
+      "correct": 2,
+      "n": 3
+    },
+    "hindi": {
+      "acc": 0.3333,
+      "correct": 1,
+      "n": 3
+    },
+    "plutus": {
+      "acc": 0.6667,
+      "correct": 2,
+      "n": 3
+    },
+    "spanish": {
+      "acc": 1.0,
+      "correct": 3,
+      "n": 3
+    }
+  },
+  "preds": [
+    {
+      "id": "arabic_accounting_train:accounting_mcq_00069",
+      "language": "arabic",
+      "source": "arabic_accounting_train",
+      "pred": "B",
+      "gold": "D",
+      "ok": false
+    },
+    {
+      "id": "arabic_accounting_train:accounting_mcq_00221",
+      "language": "arabic",
+      "source": "arabic_accounting_train",
+      "pred": "E",
+      "gold": "A",
+      "ok": false
+    },
+    {
+      "id": "arabic_accounting_train:accounting_mcq_00356",
+      "language": "arabic",
+      "source": "arabic_accounting_train",
+      "pred": "A",
+      "gold": "A",
+      "ok": true
+    },
+    {
+      "id": "cfa_cpa_chinese:zh_0057",
+      "language": "chinese",
+      "source": "cfa_cpa_chinese",
+      "pred": "B",
+      "gold": "C",
+      "ok": false
+    },
+    {
+      "id": "cfa_cpa_chinese:zh_0061",
+      "language": "chinese",
+      "source": "cfa_cpa_chinese",
+      "pred": "C",
+      "gold": "A",
+      "ok": false
+    },
+    {
+      "id": "cfa_cpa_chinese:zh_0069",
+      "language": "chinese",
+      "source": "cfa_cpa_chinese",
+      "pred": "C",
+      "gold": "A",
+      "ok": false
+    },
+    {
+      "id": "bhashabench_en:00187dac-d944-4652-a3ed-8a8d2f9bbb63",
+      "language": "english",
+      "source": "bhashabench_en",
+      "pred": "B",
+      "gold": "A",
+      "ok": false
+    },
+    {
+      "id": "bhashabench_en:00354135-2690-43f6-a682-6ecd24b4852b",
+      "language": "english",
+      "source": "bhashabench_en",
+      "pred": "C",
+      "gold": "B",
+      "ok": false
+    },
+    {
+      "id": "bhashabench_en:00420165-25e0-48ae-a20e-440ad85dc24f",
+      "language": "english",
+      "source": "bhashabench_en",
+      "pred": "C",
+      "gold": "A",
+      "ok": false
+    },
+    {
+      "id": "plutus:116",
+      "language": "greek",
+      "source": "plutus",
+      "pred": "B",
+      "gold": "B",
+      "ok": true
+    },
+    {
+      "id": "plutus:128",
+      "language": "greek",
+      "source": "plutus",
+      "pred": "A",
+      "gold": "A",
+      "ok": true
+    },
+    {
+      "id": "plutus:153",
+      "language": "greek",
+      "source": "plutus",
+      "pred": "B",
+      "gold": "C",
+      "ok": false
+    },
+    {
+      "id": "bhashabench_hi:015d0667-008b-493d-a571-6513b8288a53",
+      "language": "hindi",
+      "source": "bhashabench_hi",
+      "pred": "A",
+      "gold": "D",
+      "ok": false
+    },
+    {
+      "id": "bhashabench_hi:021981a9-a54f-4976-99d6-66c11bcbbc72",
+      "language": "hindi",
+      "source": "bhashabench_hi",
+      "pred": "B",
+      "gold": "B",
+      "ok": true
+    },
+    {
+      "id": "bhashabench_hi:0301dc1e-7f4d-4c13-9222-b00a7edfd3c9",
+      "language": "hindi",
+      "source": "bhashabench_hi",
+      "pred": "B",
+      "gold": "A",
+      "ok": false
+    },
+    {
+      "id": "flare_es:multifines10",
+      "language": "spanish",
+      "source": "flare_es",
+      "pred": "B",
+      "gold": "B",
+      "ok": true
+    },
+    {
+      "id": "flare_es:multifines106",
+      "language": "spanish",
+      "source": "flare_es",
+      "pred": "D",
+      "gold": "D",
+      "ok": true
+    },
+    {
+      "id": "flare_es:multifines115",
+      "language": "spanish",
+      "source": "flare_es",
+      "pred": "B",
+      "gold": "B",
+      "ok": true
+    }
+  ]
+}

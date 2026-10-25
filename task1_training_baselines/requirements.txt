@@ -1,0 +1,17 @@
+# Install PyTorch separately to match your GPU / CUDA version:
+#   https://pytorch.org/get-started/locally/
+#   e.g.  pip install torch --index-url https://download.pytorch.org/whl/cu124
+# (or the CPU-only build if you have no GPU)
+
+# For exact replication, pin the versions used for the original runs, i.e.
+# replace the lines below with  package==version.
+transformers>=4.56   # `dtype=` argument in from_pretrained; Ministral 3 needs a recent release
+peft
+accelerate
+safetensors
+sentencepiece
+protobuf
+mistral-common       # tokenizer support for Ministral 3
+
+# NOTE: do NOT install torchao. It conflicted with Ministral 3 during our runs
+# (if it is already installed and loading fails, run: pip uninstall -y torchao).
